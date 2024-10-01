@@ -28,7 +28,6 @@ class BytePairEncoder:
                 pair = (chars[i], chars[i+1])
                 pair_count[pair]+= count 
             pass
-            # END OF YOUR CODE #
         return pair_count
 
     def _merge_pair(
@@ -103,11 +102,9 @@ class BytePairEncoder:
 
 
 
-                # select the most frequent pair and add it to the vocabulary
+            # select the most frequent pair and add it to the vocabulary
             most_frequent_pair = max(pair_count, key=pair_count.get)  
-            print(most_frequent_pair)
-            #pdb.set_trace()
-            # END OF YOUR CODE #
+
             # add the most frequent pair to the vocabulary
             self.vocab[most_frequent_pair] = n + i
 
@@ -141,7 +138,6 @@ class BytePairEncoder:
             # recursively add a tuple of consecutive characters to ``pairs``
             pairs.append((prev_char, char))
             prev_char = char
-            # END OF YOUR CODE #
         return pairs
 
     def _merge_pair_for_text(
@@ -161,7 +157,6 @@ class BytePairEncoder:
         merged = first + second
         new_text = []
 
-        # TODO: YOUR CODE HERE # (Part 1h)
         # merge all occurrences of ``pair_to_merge`` in ``text`` to get ``new_text`` and return it
         i = 0
         while i < len(text):
@@ -172,8 +167,6 @@ class BytePairEncoder:
                 new_text.append(text[i])
                 i += 1
 
-        return new_text
-        # END OF YOUR CODE #
         return new_text
 
     def encode(self, raw_text: str) -> Tuple[List[str], List[int]]:
@@ -239,19 +232,4 @@ class BytePairEncoder:
 bpe = BytePairEncoder()
 corpus = "The world is full of wonders, Mountains and oceans, beauty everywhere, The world is amazing!"
 vocab = bpe.train(corpus)
-text, encoding = bpe.encode("wow the world is amazing")
-# corpus = corpus.lower()
-# corpus = corpus.replace(",", "")
-# corpus = corpus.replace("!", "")
-# corpus = corpus.replace(" ", "_")
-
-# # step 2: pre-tokenization
-# word_list = corpus.split("_")
-# word_list = [w + "_" for w in word_list]
-
-
-# # step 3: learning from the word list
-# word_count = defaultdict(int)
-# for w in word_list:
-#     word_count[tuple([*w])] += 1
-# bpe._get_pair_counts(word_count)
+text, encoding = bpe.encode("the world is amazing")
