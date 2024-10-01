@@ -30,7 +30,7 @@ We begin by preprocessing the text. This involves converting the entire corpus t
 
 
 
-Our basic dictionary consists of the set of characters used in out corpus. In this case, it is given by 22 tokens.
+Our basic dictionary consists of the set of characters used in the corpus. In this case, it is given by 22 tokens.
 
     {'i': 0, 'w': 1, 'r': 2, 'z': 3, 'e': 4, 's': 5, 't': 6, 'd': 7, 'y': 8, 'l': 9, 'a': 10, 'f': 11, 'v': 12, 'h': 13, '_': 14, 'c': 15, 'b': 16, 'g': 17, 'u': 18, 'm': 19, 'n': 20, 'o': 21}
 
