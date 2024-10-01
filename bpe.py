@@ -232,4 +232,4 @@ class BytePairEncoder:
 bpe = BytePairEncoder()
 corpus = "The world is full of wonders, Mountains and oceans, beauty everywhere, The world is amazing!"
 vocab = bpe.train(corpus)
-text, encoding = bpe.encode("wow he world is amazing")
+text, encoding = bpe.encode("wow the world is amazing")
