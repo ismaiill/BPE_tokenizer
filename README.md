@@ -1,5 +1,6 @@
 ## Implementation of Byte-Pair-Encoder algorithm.
 
+Suppose you want to translate the following sentence from English to French: "wow, the world is amazing." In today’s digital age, you would likely open a large language model (LLM) and ask the AI to perform the translation for you. In this post, we will explore the very first step that the LLM takes to do the job, namely tokenization. The BPE algorithm was introduced in 1994 as a text compression algorithm but it can be used as a tokenizer as well.
 
 The first ingredient of the BPE algorithm is a corpus of text. Let's take the following example. 
 
