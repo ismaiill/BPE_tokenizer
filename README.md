@@ -63,5 +63,3 @@ Now our initial sequence, "wow, the world is amazing," is encoded as:
 
 As you can see, since `"the"`, `"wo"` and ` "d_"` appear quite frequently in our corpus, the BPE algorithm included those in the vocabulary as tokens, which is more efficient than trying to assign a code to each character.
 
-You can download a full implementation of the BPE algorithm in [this repository.](https://github.com/ismaiill/BPE_tokenizer)
-
